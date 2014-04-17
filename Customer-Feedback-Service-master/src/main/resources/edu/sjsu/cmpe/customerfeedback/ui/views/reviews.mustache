@@ -1,0 +1,29 @@
+<html>
+        <body>
+            <div align="center">
+            <table border="1">
+            	<tr>
+            		<td><font size="4.5"><pre><b>Reviewer</b></font></td>
+            		<td><font size="4.5"><pre><b>Review</b></font></td>
+            		<td><font size="4.5"><pre><b>Rating</b></font></td>
+            	</tr>
+            {{#reviews}}
+                <tr>
+                    <td><font size="4"><pre>{{reviewer}}</font></td>
+                    <td><font size="4"><pre>{{reviewText}}</font></td>
+                    <td><font size="4"><pre>{{TemplateText}}</font></td>                    
+                </tr>
+            {{/reviews}}
+            </table>
+            </div>
+            
+            <div align="center">
+            <form method="POST" onsubmit="setTimeout(function () { location.reload(); }, 10)" >
+            <br><pre>Add a new Review<br><input type="text" name="reviewText" placeholder="Review Here" >
+            <br><input type="text" name="templateText" placeholder="Like/Unlike or Rating">
+            <br><input type="text" name="reviewer" placeholder="Your Name">
+            <br><input type="submit" name="submit" >
+			</form>
+			</div>
+        </body>
+</html>
